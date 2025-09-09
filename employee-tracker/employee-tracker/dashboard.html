@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Employee Tracker</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">
+      <img src="assets/logo.svg" alt="Logo"><h1>Employee Tracker</h1>
+    </a>
+    <div class="search-box"><input placeholder="Search..."><button class="btn ghost" onclick="alert('Search demo only')">Go</button></div>
+    <nav class="nav">
+      <a data-page="dashboard" href="dashboard.html">🏠 Dashboard</a>
+      <a data-page="employees" href="employees.html">👥 Employees</a>
+      <a data-page="attendance" href="attendance.html">🕒 Attendance</a>
+      <a data-page="locations" href="locations.html">📍 Live Map</a>
+      <a data-page="tasks" href="tasks.html">✅ Tasks</a>
+      <a data-page="reports" href="reports.html">📊 Reports</a>
+      <a data-page="settings" href="settings.html">⚙️ Settings</a>
+    </nav>
+    <div style="margin-top:auto">
+      <button class="btn ghost" onclick="logout()">Logout</button>
+      <p class="footer-note">v1.0 · Demo (no backend)</p>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <h2>Dashboard</h2>
+      <div class="user-mini">
+        <span class="badge">Admin</span>
+        <img src="https://i.pravatar.cc/60?img=68" alt="U">
+      </div>
+    </div>
+    
+<section class="grid cols-4">
+  <div class="card">
+    <div class="kpi-row"><h3>Total Employees</h3><span class="badge">All</span></div>
+    <div class="stat" id="kpi-employees">0</div>
+  </div>
+  <div class="card">
+    <div class="kpi-row"><h3>Active</h3><span class="badge">Today</span></div>
+    <div class="stat" id="kpi-active">0</div>
+  </div>
+  <div class="card">
+    <div class="kpi-row"><h3>Present</h3><span class="badge">Today</span></div>
+    <div class="stat" id="kpi-present">0</div>
+  </div>
+  <div class="card">
+    <div class="kpi-row"><h3>Open Tasks</h3><span class="badge">Pending</span></div>
+    <div class="stat" id="kpi-tasks">0</div>
+  </div>
+</section>
+
+<section class="card" style="margin-top:16px">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h3>Recent Attendance</h3>
+    <a class="btn ghost" href="attendance.html">View all</a>
+  </div>
+  <table class="table">
+    <thead><tr><th>Date</th><th>Employee</th><th>Check-in</th><th>Check-out</th><th>Notes</th></tr></thead>
+    <tbody id="att-body"></tbody>
+  </table>
+</section>
+
+<script>renderDashboard();</script>
+
+  </main>
+</div>
+<script src="assets/app.js"></script>
+<script>initSidebar('dashboard'); requireAuth();</script>
+</body>
+</html>

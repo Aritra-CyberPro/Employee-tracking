@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login · Employee Tracker</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-card">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/logo.svg" width="42" height="42" alt="Logo"/>
+      <div>
+        <h1>Employee Tracker</h1>
+        <div class="small">Sign in to continue</div>
+      </div>
+    </div>
+    <form onsubmit="login(event)" style="margin-top:18px; display:grid; gap:12px">
+      <div>
+        <label>Email</label>
+        <input id="email" class="input" placeholder="you@company.com" type="email" required>
+      </div>
+      <div>
+        <label>Password</label>
+        <input id="password" class="input" placeholder="••••••••" type="password" required>
+      </div>
+      <button class="btn">Login</button>
+      <button type="button" class="btn ghost" onclick="window.location.href='dashboard.html'">Skip (demo)</button>
+      <div class="small">Demo only. Any email/password works and data stays in your browser.</div>
+    </form>
+  </div>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
