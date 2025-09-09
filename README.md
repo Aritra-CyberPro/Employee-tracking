@@ -10,7 +10,7 @@ It provides a dashboard, live map, device list, and settings panel, all built wi
 <br>
 • **Dashboard**: <br>
 -- KPIs (total devices, online, offline, update interval). <br>
--- Device table showing ID, label, owner, phone, and status. <br>
+-- Device table (label, ID, owner, phone, status). <br>
 <br>
 • **Live Map (Simulated Real-time)**: <br>
 -- Map with moving markers (updates every 2 seconds). <br>
@@ -65,7 +65,7 @@ It provides a dashboard, live map, device list, and settings panel, all built wi
 https://github.com/Aritra-CyberPro/Employee-tracking.git
 ```
 ```
-cd employee-tracking-website
+cd Employee-tracking.git
 ```
 **2. Open the Project**: <br>
 No build tools are required. The project is pure HTML, CSS, and JavaScript. <br>
